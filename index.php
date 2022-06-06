@@ -4,6 +4,8 @@ $testo = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium,
 // var_dump($_GET);
 $keyWord = $_GET["parola"];
 $filtered = str_replace($keyWord, "***", $testo);
+$testArray = explode(" ", $testo)
+
 
 ?>
 
@@ -17,7 +19,11 @@ $filtered = str_replace($keyWord, "***", $testo);
 </head>
 <body style="text-align: center;">
     <h1>Censura il testo</h1>
-    <h2>Aggiungi alla fine di questo link la parola da censurare -> http://localhost/php-badwords/?parola=</h2>
+    <form action="?prola=" method="get">
+        <label for="parola"> Inserisci la parola da censure </label>
+        <input type="text" name="parola">
+        <button type="submit"> Coglione</button>
+    </form>
     <p> <?php echo $filtered ?></p>
     <?php if($keyWord) :?>
         <p>La lunghezza del testo censuarto è: <?php echo strlen($filtered)?></p>
