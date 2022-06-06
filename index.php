@@ -20,9 +20,10 @@ $filtered = str_replace($keyWord, "***", $testo);
     <h2>Aggiungi alla fine di questo link la parola da censurare -> http://localhost/php-badwords/?parola=</h2>
     <p> <?php echo $filtered ?></p>
     <?php if($keyWord) :?>
-        <p>La lunghezza dell testo censuarto è: <?php echo strlen($filtered)?></p>
+        <p>La lunghezza del testo censuarto è: <?php echo strlen($filtered)?></p>
+        <p>La parola censurata è: <?php echo $keyWord ?></p>
     <?php else : ?>
-        <p>La lunghezza dell testo non censuarto è: <?php echo strlen($testo)?></p>
+        <p>La lunghezza del testo non censuarto è: <?php echo strlen($testo)?></p>
     <?php endif ; ?>
 </body>
 </html>
