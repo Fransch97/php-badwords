@@ -19,17 +19,16 @@ $testArray = explode(" ", $testo)
 </head>
 <body style="text-align: center;">
     <h1>Censura il testo</h1>
-    <form action="?prola=" method="get">
+    <form method="get">
         <label for="parola"> Inserisci la parola da censure </label>
         <input type="text" name="parola">
         <button type="submit"> Coglione</button>
     </form>
     <p> <?php echo $filtered ?></p>
+    <p>La lunghezza del testo censuarto è: <?php echo strlen($filtered)?></p>
+    <p>La lunghezza del testo non censuarto è: <?php echo strlen($testo)?></p>
     <?php if($keyWord) :?>
-        <p>La lunghezza del testo censuarto è: <?php echo strlen($filtered)?></p>
         <p>La parola censurata è: <?php echo $keyWord ?></p>
-    <?php else : ?>
-        <p>La lunghezza del testo non censuarto è: <?php echo strlen($testo)?></p>
     <?php endif ; ?>
 </body>
 </html>
