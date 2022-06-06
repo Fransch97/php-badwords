@@ -18,12 +18,11 @@ $filtered = str_replace($keyWord, "***", $testo);
 <body style="text-align: center;">
     <h1>Censura il testo</h1>
     <h2>Aggiungi alla fine di questo link la parola da censurare -> http://localhost/php-badwords/?parola=</h2>
-    <?php if($keyWord) :?>
     <p> <?php echo $filtered ?></p>
-    <p>La lunghezza dell testo censuarto è: <?php echo strlen($filtered)?></p>
+    <?php if($keyWord) :?>
+        <p>La lunghezza dell testo censuarto è: <?php echo strlen($filtered)?></p>
     <?php else : ?>
-    <p> <?php echo $testo ?></p>
-    <p>La lunghezza dell testo è: <?php echo strlen($testo)?></p>
+        <p>La lunghezza dell testo non censuarto è: <?php echo strlen($testo)?></p>
     <?php endif ; ?>
 </body>
 </html>
