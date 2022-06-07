@@ -22,7 +22,7 @@ $testArray = explode(" ", $testo)
     <form method="get">
         <label for="parola"> Inserisci la parola da censure </label>
         <input type="text" name="parola">
-        <button type="submit"> Coglione</button>
+        <button type="submit"> vai</button>
     </form>
     <p> <?php echo $filtered ?></p>
     <p>La lunghezza del testo censuarto è: <?php echo strlen($filtered)?></p>
